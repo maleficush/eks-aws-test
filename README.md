@@ -1,3 +1,19 @@
+eksctl create cluster \
+--vpc-public-subnets subnet-078f72bcc89832f0a,subnet-06f623b41bd514511,subnet-01a427bfc1fb2462a \
+--name eks-work-cluster \
+--region ap-northeast-2 \
+--version 1.23 \
+--nodegroup-name eks-work-nodegroup \
+--node-type t2.small \
+--nodes 2 \
+--nodes-min 2 \
+--nodes-max 5
+
+eksctl delete cluster --name eks-work-cluster
+
+
+
+
 # 『클라우드 네이티브를 위한 쿠버네티스 실전 프로젝트: 아마존 EKS로 배우는 데브옵스 및 IaC 기반 서비스 배포와 관리』
 
 동양북스 『클라우드 네이티브를 위한 쿠버네티스 실전 프로젝트』의 깃허브 저장소입니다.
